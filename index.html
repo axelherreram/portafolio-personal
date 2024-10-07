@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-[#0f172a] text-[#38bdf8]">
-    <nav class="shadow fixed  w-full" style="background-color:  #0f172a;">
+    <nav class="navbar shadow fixed  w-full" style="background-color:  #0f172a;">
         <div class="container mx-auto px-4  w-full">
             <div class="flex items-center justify-between py-4 w-100">
                 <a aria-label="Inicio" href="#">
@@ -143,23 +143,23 @@
                 </a>
 
                 <div class="hidden sm:flex sm:items-center">
-                    <a href="#section-home"
-                        class="text-white text-md hover:bg-gray-700 rounded py-2 px-1 font-semibold hover-custom mr-4">
-                        <i class="bi bi-house"></i>
-                        Inicio</a>
-                    <a href="#section-proyectos"
-                        class="text-white text-md hover:bg-gray-700 rounded py-2 px-1 font-semibold hover-custom mr-4">
-                        <i class="bi bi-code"></i>
-                        Proyectos</a>
-                    <a href="#"
-                        class="text-white text-md hover:bg-gray-700 rounded py-2 px-1 font-semibold hover-custom mr-4">
-                        <i class="bi bi-person"></i>
-                        Sobre mí</a>
-                    <a href="#"
-                        class="text-white text-md hover:bg-gray-700 rounded py-2 px-1 font-semibold hover-custom">
-                        <i class="bi bi-envelope"></i>
-                        Contacto</a>
+                    <a href="#section-home" data-target="section-home" aria-label="Ir a la sección de inicio"
+                        class="nav-link text-white text-md hover:bg-gray-700 rounded py-2 px-1 font-semibold hover-custom mr-4">
+                        <i class="bi bi-house"></i> Inicio
+                    </a>
+                    <a href="#section-proyectos" data-target="section-proyectos"
+                        aria-label="Ir a la sección de proyectos"
+                        class="nav-link text-white text-md hover:bg-gray-700 rounded py-2 px-1 font-semibold hover-custom mr-4">
+                        <i class="bi bi-code"></i> Proyectos
+                    </a>
+                    <a href="#" data-target="about"
+                        class="nav-link text-white text-md hover:bg-gray-700 rounded py-2 px-1 font-semibold hover-custom mr-4">
+                        <i class="bi bi-person"></i> Sobre mí</a>
+                    <a href="#" data-target="contact"
+                        class="nav-link text-white text-md hover:bg-gray-700 rounded py-2 px-1 font-semibold hover-custom">
+                        <i class="bi bi-envelope"></i> Contacto</a>
                 </div>
+
 
                 <div class="sm:hidden cursor-pointer hover:bg-gray-500 rounded" id="menu-toggle">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white svg-hover" viewBox="0 0 24 24">
@@ -185,7 +185,9 @@
     </nav>
 
     <main class="content p-5 flex flex-col items-center justify-center">
-        <section class="h-screen w-full mb-5 flex flex-col md:flex-row items-center justify-center" id="section-home">
+        <section
+            class="h-screen max-w-screen-xl mx-auto sm:p-10 md:p-16  flex flex-col md:flex-row items-center justify-center"
+            id="section-home">
             <div class="flex flex-col justify-center items-start w-full md:w-1/2 p-5">
                 <h1 class="ml5 text-white text-4xl md:text-5xl font-bold">
                     Axel Herrera
@@ -204,15 +206,19 @@
             </div>
         </section>
 
-        <section class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16" id="section-proyectos">
+        <section class="max-w-screen-xl mt-5 mx-auto p-5 sm:p-10 md:p-16" id="section-proyectos">
             <div class="border-b mb-5 flex justify-between text-sm">
-                <div class="flex items-center pb-2 pr-2 border-b-2 uppercase text-[#38bdf8]">
+                <div class=" flex items-center pb-2 pr-2 border-b-2  uppercase">
                     <i class="bi bi-code text-2xl mr-1"></i>
                     <a href="#" class="font-semibold inline-block ">Proyectos</a>
                 </div>
+                <a href="./html/more-proyectos.html" class="flex items-center pb-2 pr-2 border-b-2">
+                    <i class="bi bi-folder-plus text-1xl mr-1"></i>
+                    Ver todos</a>
+                </a>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-        
+
                 <!-- CARD 1 -->
                 <div class="rounded overflow-hidden shadow-lg flex flex-col">
                     <a href="#"></a>
@@ -255,7 +261,7 @@
                             </svg>
                             <span class="ml-1">6 mins ago</span>
                         </span>
-        
+
                         <span href="#" class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
                             <svg class="h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -308,7 +314,7 @@
                             </svg>
                             <span class="ml-1"> 10 days ago</span>
                         </span>
-        
+
                         <span href="#" class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
                             <svg class="h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -319,7 +325,7 @@
                         </span>
                     </div>
                 </div>
-        
+
                 <!-- CARD 3 -->
                 <div class="rounded overflow-hidden shadow-lg flex flex-col">
                     <a href="#"></a>
@@ -361,7 +367,7 @@
                             </svg>
                             <span class="ml-1">16 hours ago</span>
                         </span>
-        
+
                         <span href="#" class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
                             <svg class="h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -372,41 +378,14 @@
                         </span>
                     </div>
                 </div>
-        
+
             </div>
-        
+
         </section>
 
         <section class="w-full h-screen">
 
         </section>
-
-        <script>
-            // JavaScript para manejar el carrusel
-            let currentIndex = 0;
-            const cards = document.querySelectorAll('.carousel-content > div');
-            const totalCards = cards.length;
-
-            document.getElementById('next').addEventListener('click', () => {
-                cards[currentIndex].classList.add('hidden');
-                currentIndex = (currentIndex + 1) % totalCards;
-                cards[currentIndex].classList.remove('hidden');
-            });
-
-            document.getElementById('prev').addEventListener('click', () => {
-                cards[currentIndex].classList.add('hidden');
-                currentIndex = (currentIndex - 1 + totalCards) % totalCards;
-                cards[currentIndex].classList.remove('hidden');
-            });
-
-            // Inicializar el carrusel
-            cards.forEach((card, index) => {
-                if (index !== currentIndex) {
-                    card.classList.add('hidden');
-                }
-            });
-        </script>
-
 
     </main>
 

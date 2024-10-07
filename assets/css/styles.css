@@ -1,7 +1,13 @@
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Baloo Paaji 2", sans-serif !important;
 }
 
+/* Link Styles */
 a {
     font-family: "Baloo Paaji 2", sans-serif !important; 
     transition: color 0.3s ease; 
@@ -11,6 +17,12 @@ a {
     color: #38bdf8; 
 }
 
+/* Navbar Styles */
+nav {
+    z-index: 9999;
+}
+
+/* SVG Styles */
 .svg-hover {
     transition: all 0.3s ease;
 }
@@ -19,24 +31,10 @@ a {
     fill: #38bdf8; 
     transition: all 0.3s ease; 
 }
-nav{
-    z-index: 9999;
-}
 
+/* Media Queries */
 @media (max-width: 768px) {
     .svg-hover {
         width: 240px; 
     }
 }
-
-@media (max-width: 768px) {
-    .botton-left{
-        top: 50%;
-        left: -10px;
-    }
-    .botton-rigth{
-        top: 50%;
-        right:  -10px;
-    }
-}
-
