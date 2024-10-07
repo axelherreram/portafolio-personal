@@ -32,6 +32,20 @@ nav {
     transition: all 0.3s ease; 
 }
 
+
+.bg-custom {
+    background-image: url('https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; 
+    min-height: 200px; 
+    height: 250px; 
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+
 /* Media Queries */
 @media (max-width: 768px) {
     .svg-hover {

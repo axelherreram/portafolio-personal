@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - Axel Herrera</title>
     <link rel="icon" href="./assets/icons/icon-page.ico" type="image/x-icon">
+    <!-- Estilos tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Estilos propios -->
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- Iconos de Bootstrap  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Iconos de Devicon -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
 </head>
 
 <body class="bg-[#0f172a] text-[#38bdf8]">
@@ -152,7 +158,7 @@
                         class="nav-link text-white text-md hover:bg-gray-700 rounded py-2 px-1 font-semibold hover-custom mr-4">
                         <i class="bi bi-code"></i> Proyectos
                     </a>
-                    <a href="#" data-target="about"
+                    <a href="#section-sobre-mi" data-target="section-sobre-mi" aria-label="Ir a la sección de sobre mí"
                         class="nav-link text-white text-md hover:bg-gray-700 rounded py-2 px-1 font-semibold hover-custom mr-4">
                         <i class="bi bi-person"></i> Sobre mí</a>
                     <a href="#" data-target="contact"
@@ -171,13 +177,13 @@
 
             <div class="menu-responsive block sm:hidden border-t-2 py-2 hidden " id="mobile-menu">
                 <div class="flex flex-col">
-                    <a href="#" class="text-white text-sm font-semibold hover-custom mb-1"><i
+                    <a href="#" class="text-white text-md font-semibold hover-custom mb-1"><i
                             class="bi bi-house p-2"></i>Inicio</a>
-                    <a href="#" class="text-white text-sm font-semibold hover-custom mb-1"><i
+                    <a href="#" class="text-white text-md font-semibold hover-custom mb-1"><i
                             class="bi bi-code p-2"></i>Proyectos</a>
-                    <a href="#" class="text-white text-sm font-semibold hover-custom mb-1"><i
+                    <a href="#" class="text-white text-md font-semibold hover-custom mb-1"><i
                             class="bi bi-person p-2"></i>Sobre mí</a>
-                    <a href="#" class="text-white text-sm font-semibold hover-custom mb-1"><i
+                    <a href="#" class="text-white text-md font-semibold hover-custom mb-1"><i
                             class="bi bi-envelope p-2"></i>Contacto</a>
                 </div>
             </div>
@@ -186,12 +192,10 @@
 
     <main class="content p-5 flex flex-col items-center justify-center">
         <section
-            class="h-screen max-w-screen-xl mx-auto sm:p-10 md:p-16  flex flex-col md:flex-row items-center justify-center"
+            class="h-screen max-w-screen-xl mx-auto sm:p-10 md:p-16 flex flex-col md:flex-row items-center justify-center"
             id="section-home">
             <div class="flex flex-col justify-center items-start w-full md:w-1/2 p-5">
-                <h1 class="ml5 text-white text-4xl md:text-5xl font-bold">
-                    Axel Herrera
-                </h1>
+                <h1 class="ml5 text-white text-4xl md:text-5xl font-bold">Axel Herrera</h1>
                 <div class="text-left mt-4">
                     <p class="text-white">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aspernatur ea fuga porro eaque neque
@@ -201,18 +205,23 @@
                 </div>
             </div>
             <div class="w-full md:w-1/2 flex justify-center items-center">
-                <img src="./assets/img/home.png" alt="Descripción de la imagen"
-                    class="w-45 h-45 rounded-full shadow-lg shadow-[#38bdf8]" />
+                <div class="relative">
+                    <img src="./assets/img/home.png" alt="Descripción de la imagen"
+                        class="w-48 h-48 rounded-full object-cover shadow-lg shadow-[#38bdf8]" />
+                    <div class="absolute inset-0 rounded-full border-4 border-transparent shadow-lg shadow-[#38bdf8]">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="max-w-screen-xl mt-5 mx-auto p-5 sm:p-10 md:p-16" id="section-proyectos">
+        <section class="max-w-screen-xl  mt-5 mx-auto p-5 sm:p-10 md:p-16" id="section-proyectos">
             <div class="border-b mb-5 flex justify-between text-sm">
                 <div class=" flex items-center pb-2 pr-2 border-b-2  uppercase">
                     <i class="bi bi-code text-2xl mr-1"></i>
                     <a href="#" class="font-semibold inline-block ">Proyectos</a>
                 </div>
-                <a href="./html/more-proyectos.html" class="flex items-center pb-2 pr-2 border-b-2">
+                <a href="./html/more-proyectos.html"
+                    class="flex items-center pb-2 pr-2 border-b-2 hover:bg-gray-700 p-2 rounded">
                     <i class="bi bi-folder-plus text-1xl mr-1"></i>
                     Ver todos</a>
                 </a>
@@ -382,12 +391,97 @@
             </div>
 
         </section>
-
-        <section class="w-full h-screen">
-
-        </section>
-
     </main>
+
+    <section class="max-w-screen-xl h-100 relative overflow-hidden bg-custom">
+        <!-- Puedes agregar contenido aquí si es necesario -->
+    </section>
+
+    <main class="content p-5 flex flex-col items-center justify-center">
+
+        <section
+            class="max-w-screen-xl h-screen mt-5 mx-auto p-5 sm:p-10 md:p-16 flex flex-col items-center justify-center relative overflow-hidden"
+            id="section-sobre-mi">
+            <div class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('https://your-image-url.com/background.jpg');"></div>
+            <div class="flex flex-col md:flex-row items-center justify-center w-full z-10">
+                <!-- Apartado de la foto y descripción -->
+                <div class="w-full md:w-1/2 flex flex-col items-center md:items-start">
+                    <div class="flex justify-center mb-5">
+                        <div class="relative">
+                            <img src="https://via.placeholder.com/300" alt="Tu foto"
+                                class="w-48 h-48 rounded-full object-cover shadow-inner shadow-[#38bdf8]" />
+                            <div
+                                class="absolute inset-0 rounded-full border-4 border-transparent shadow-lg shadow-[#38bdf8]">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h2 class="text-3xl font-bold text-white mb-4">Sobre mí</h2>
+                        <p class="text-white">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex aspernatur ea fuga porro eaque
+                            neque
+                            quibusdam fugit explicabo optio nihil, rem molestiae expedita consectetur laborum id quod
+                            tempore blanditiis aliquam.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Apartado de las tecnologías -->
+                <div class="w-full md:w-1/2 text-center md:text-left mt-10 md:mt-0">
+                    <h2 class="text-3xl font-bold text-white mb-4">Tecnologías que utilizo</h2>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <div class="flex items-center">
+                            <i class="devicon-html5-plain colored text-2xl"></i>
+                            <span class="ml-2 text-white">HTML</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="devicon-css3-plain colored text-2xl"></i>
+                            <span class="ml-2 text-white">CSS</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="devicon-javascript-plain colored text-2xl"></i>
+                            <span class="ml-2 text-white">JavaScript</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="devicon-react-original colored text-2xl"></i>
+                            <span class="ml-2 text-white">React</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="devicon-nodejs-plain colored text-2xl"></i>
+                            <span class="ml-2 text-white">Node.js</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="devicon-tailwindcss-plain colored text-2xl"></i>
+                            <span class="ml-2 text-white">Tailwind CSS</span>
+                        </div>
+                        <!-- Agrega más tecnologías según sea necesario -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer class="w-full bg-gray-800 text-white">
+        <div class="flex justify-center space-x-4 p-5">
+            <a href="https://www.linkedin.com/in/axel-herrera" target="_blank" aria-label="LinkedIn"
+                class="hover:text-blue-500">
+                <i class="bi bi-linkedin text-2xl"></i>
+            </a>
+            <a href="https://github.com/axelherreram" target="_blank" aria-label="GitHub" class="hover:text-gray-500">
+                <i class="bi bi-github text-2xl"></i>
+            </a>
+            <a href="https://twitter.com/axel_herrera" target="_blank" aria-label="Twitter" class="hover:text-blue-400">
+                <i class="bi bi-twitter text-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com/axel_herrera" target="_blank" aria-label="Instagram"
+                class="hover:text-pink-500">
+                <i class="bi bi-instagram text-2xl"></i>
+            </a>
+        </div>
+    </footer>
 
 </body>
 <script src="./js/app.js"></script>
