@@ -2,13 +2,27 @@
 const menuToggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 
-menuToggle.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
+// Para los enlaces del menú responsivo
+const navLinks = document.querySelectorAll('.menu-responsive a');
+
+// Evento para abrir y cerrar el menú al hacer clic en el ícono del menú
+menuToggle.addEventListener('click', function () {
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Función para cerrar el menú
+function closeMenu() {
+    mobileMenu.classList.add('hidden');
+}
+
+// Agregar el evento de clic para cada enlace del menú responsivo
+navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
 });
 
 // Resaltar la sección activa en el navbar
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-link");
+const navbarLinks = document.querySelectorAll(".nav-link");
 
 window.addEventListener("scroll", () => {
   let current = "";
@@ -17,21 +31,20 @@ window.addEventListener("scroll", () => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
 
-    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+    if (window.scrollY >= sectionTop - sectionHeight / 3) {
       current = section.getAttribute("id");
     }
   });
 
-  navLinks.forEach((link) => {
-    link.classList.remove("text-white", "bg-white"); // Elimina el estilo de la clase
+  navbarLinks.forEach((link) => {
+    link.classList.remove("text-white", "bg-white");
     if (link.getAttribute("data-target") === current) {
-      link.classList.add("text-[#38bdf8]", "bg-white"); // Añade el estilo para la sección activa
+      link.classList.add("text-[#38bdf8]", "bg-white");
     }
   });
 });
 
-
-// Obtener todos los elementos que queremos animar
+// Funcionalidad para las animaciones de fadeIn
 const fadeElements = document.querySelectorAll('.fadeIn');
 
 // Función para verificar si el elemento está en la vista
@@ -60,7 +73,7 @@ window.addEventListener('scroll', checkFadeIn);
 // Comprobar el scroll al cargar la página
 window.addEventListener('load', checkFadeIn);
 
-
+// Cambiar la clase del navbar al hacer scroll
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
   const sectionProyectos = document.getElementById("section-proyectos");
@@ -74,4 +87,3 @@ window.addEventListener("scroll", function () {
       navbar.classList.add("md:bg-transparent");
   }
 });
-
