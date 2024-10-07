@@ -74,3 +74,4 @@ window.addEventListener("scroll", function () {
       navbar.classList.add("md:bg-transparent");
   }
 });
+

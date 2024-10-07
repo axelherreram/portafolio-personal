@@ -31,7 +31,8 @@ a {
 }
 
 .card:hover {
-    background-color: rgba(56, 189, 248, 0.25); /* Efecto hover para las tarjetas */
+    background-color: rgba(56, 189, 248, 0.25);
+    /* Efecto hover para las tarjetas */
 }
 
 /* Hover Effects */
@@ -60,6 +61,27 @@ a {
     z-index: 1;
 }
 
+.ml6 {
+    position: relative;
+    font-weight: 900;
+    font-size: 3.3em;
+  }
+  
+  .ml6 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  .shadow-text {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5) !important; 
+}
+  .ml6 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
 .bg-custom h4 {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.2);
@@ -97,5 +119,11 @@ a {
 @media (max-width: 768px) {
     .svg-hover {
         width: 240px;
+    }
+}
+
+@media (max-width: 558px) {
+    .inicio-sec {
+        margin-top: 150px;
     }
 }

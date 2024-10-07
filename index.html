@@ -196,27 +196,37 @@
         </div>
     </nav>
     <!-- Sección de Inicio -->
-    <section
-        class="h-screen max-w-screen-xl mx-auto sm:p-10 md:p-16 flex flex-col md:flex-row items-center justify-center"
-        id="section-home">
-        <div class="flex flex-col justify-center items-start w-full md:w-1/2 p-5">
-            <h1 class="ml5 text-white text-4xl md:text-5xl font-bold">Axel Herrera</h1>
-            <div class="text-left mt-4">
-                <p class="text-white">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aspernatur ea fuga porro eaque neque
-                    quibusdam fugit explicabo optio nihil, rem molestiae expedita consectetur laborum id quod
-                    tempore blanditiis aliquam.
+    <section class="h-screen max-w-screen-xl mx-auto sm:p-10 md:p-16 flex flex-col md:flex-row items-center justify-center" id="section-home">
+        <div class="inicio-sec flex flex-col justify-center items-start w-full md:w-1/2 p-5">
+            <!-- Mensaje de Bienvenida con emoji -->
+            <p class="text-lg md:text-xl lg:text-2xl  md:mt-10 text-white font-semibold mb-4 animate__animated animate__fadeInDown">
+                👋 ¡Bienvenido a mi portafolio!
+            </p>
+            <h1 class="ml6 text-4xl md:text-4xl lg:text-5xl font-extrabold shadow-text">
+                <span class="text-wrapper">
+                    <span class="letters">Axel Herrera</span>
+                </span>
+            </h1>
+    
+            <!-- Texto ajustado con emojis -->
+            <div class="text-left mt-4 animate__animated animate__fadeInUp">
+                <p class="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
+                    💻 Soy un desarrollador web enfocado en crear soluciones innovadoras y atractivas. Aquí podrás
+                    conocer mis proyectos y trabajos más destacados. 🚀
                 </p>
             </div>
         </div>
+    
         <div class="w-full md:w-1/2 flex justify-center items-center">
             <div class="relative fadeIn">
-                <img src="./assets/img/home.png" alt="Descripción de la imagen"
-                    class="w-64 h-64 rounded-full object-cover shadow-lg shadow-[#38bdf8]" />
+                <img src="./assets/img/home.png" alt="Descripción de la imagen" class="w-64 h-64 rounded-full object-cover shadow-lg shadow-[#38bdf8]" />
                 <div class="absolute inset-0 rounded-full border-4 border-transparent shadow-lg shadow-[#38bdf8]"></div>
             </div>
         </div>
     </section>
+    
+
+
 
 
     <section class="max-w-screen-xl mt-5 mx-auto p-5 sm:p-10 md:p-16" id="section-proyectos">
@@ -481,5 +491,26 @@
 
 </body>
 <script src="./js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+    // Wrap every letter in a span
+    var textWrapper = document.querySelector('.ml6 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({ loop: true })
+        .add({
+            targets: '.ml6 .letter',
+            translateY: ["1.1em", 0],
+            translateZ: 0,
+            duration: 750,
+            delay: (el, i) => 50 * i
+        }).add({
+            targets: '.ml6',
+            opacity: 0,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 1000
+        });
+</script>
 
 </html>
