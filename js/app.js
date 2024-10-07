@@ -23,9 +23,9 @@ window.addEventListener("scroll", () => {
   });
 
   navLinks.forEach((link) => {
-    link.classList.remove("text-white", "bg-gray-700"); // Elimina el estilo de la clase
+    link.classList.remove("text-white", "bg-white"); // Elimina el estilo de la clase
     if (link.getAttribute("data-target") === current) {
-      link.classList.add("text-[#38bdf8]", "bg-gray-700"); // Añade el estilo para la sección activa
+      link.classList.add("text-[#38bdf8]", "bg-white"); // Añade el estilo para la sección activa
     }
   });
 });
@@ -59,3 +59,18 @@ window.addEventListener('scroll', checkFadeIn);
 
 // Comprobar el scroll al cargar la página
 window.addEventListener('load', checkFadeIn);
+
+
+window.addEventListener("scroll", function () {
+  const navbar = document.getElementById("navbar");
+  const sectionProyectos = document.getElementById("section-proyectos");
+  const triggerHeight = sectionProyectos.offsetTop - 50; // Ajusta este valor según lo necesites
+
+  if (window.scrollY >= triggerHeight) {
+      navbar.classList.remove("md:bg-transparent");
+      navbar.classList.add("bg-[#0f172a]"); // Cambia al color deseado
+  } else {
+      navbar.classList.remove("bg-[#0f172a]");
+      navbar.classList.add("md:bg-transparent");
+  }
+});
