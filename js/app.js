@@ -31,3 +31,31 @@ window.addEventListener("scroll", () => {
 });
 
 
+// Obtener todos los elementos que queremos animar
+const fadeElements = document.querySelectorAll('.fadeIn');
+
+// Función para verificar si el elemento está en la vista
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Función para añadir la clase active cuando el elemento está en la vista
+function checkFadeIn() {
+    fadeElements.forEach((el) => {
+        if (isElementInViewport(el)) {
+            el.classList.add('active');
+        }
+    });
+}
+
+// Comprobar el scroll
+window.addEventListener('scroll', checkFadeIn);
+
+// Comprobar el scroll al cargar la página
+window.addEventListener('load', checkFadeIn);

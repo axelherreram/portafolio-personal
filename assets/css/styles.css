@@ -5,16 +5,18 @@ html {
 
 body {
     font-family: "Baloo Paaji 2", sans-serif !important;
+    overflow-x: hidden;
+
 }
 
 /* Link Styles */
 a {
-    font-family: "Baloo Paaji 2", sans-serif !important; 
-    transition: color 0.3s ease; 
+    font-family: "Baloo Paaji 2", sans-serif !important;
+    transition: color 0.3s ease;
 }
 
 .hover-custom:hover {
-    color: #38bdf8; 
+    color: #38bdf8;
 }
 
 /* Navbar Styles */
@@ -28,27 +30,52 @@ nav {
 }
 
 .svg-hover:hover path {
-    fill: #38bdf8; 
-    transition: all 0.3s ease; 
+    fill: #38bdf8;
+    transition: all 0.3s ease;
 }
 
 
 .bg-custom {
     background-image: url('https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    background-attachment: fixed; /* Fija la imagen de fondo */
-    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-    background-position: center; 
-    min-height: 200px; 
-    height: 250px; 
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     width: 100%;
     position: relative;
     z-index: 1;
 }
 
+.bg-custom h4 {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Animaciones de carga */
+.fadeIn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fadeIn.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para la animación de la imagen */
+.scaleUp {
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.scaleUp:hover {
+    transform: scale(1.1);
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
     .svg-hover {
-        width: 240px; 
+        width: 240px;
     }
 }
