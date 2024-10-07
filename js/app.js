@@ -87,3 +87,25 @@ window.addEventListener("scroll", function () {
       navbar.classList.add("md:bg-transparent");
   }
 });
+
+// Seleccionamos todos los enlaces de navegación con anclaje
+const navLinksa = document.querySelectorAll('.nav-link');
+
+navLinksa.forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault(); // Prevenimos el comportamiento predeterminado
+
+    const targetId = this.getAttribute('href'); // Obtenemos el id del destino
+    const targetSection = document.querySelector(targetId);
+
+    // Calculamos la posición del destino con un pequeño ajuste para el navbar
+    const offset = 70; // Altura de tu navbar
+    const elementPosition = targetSection.offsetTop - offset;
+
+    // Desplazamiento suave hasta la sección con el ajuste
+    window.scrollTo({
+      top: elementPosition,
+      behavior: 'smooth' // Desplazamiento suave
+    });
+  });
+});
