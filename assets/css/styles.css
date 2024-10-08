@@ -42,7 +42,7 @@ a {
 
 /* SVG Styles */
 .svg-hover {
-    transition: all 0.3s ease;
+    transform: scale(1.1);
 }
 
 .svg-hover:hover path {
