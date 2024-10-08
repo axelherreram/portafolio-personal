@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Axel Herrera</title>
+    <title>Axel Herrera - Portafolio</title>
     <link rel="icon" href="./assets/icons/icon-page.ico" type="image/x-icon">
     <!-- Estilos tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -222,17 +222,14 @@
 
         <div class="w-full md:w-1/2 flex justify-center items-center">
             <div class="relative fadeIn">
-                <img src="./assets/img/home.png" alt="Descripción de la imagen"
-                    class="w-64 h-64 rounded-full object-cover shadow-lg shadow-[#38bdf8]" />
-                <div class="absolute inset-0 rounded-full border-4 border-transparent shadow-lg shadow-[#38bdf8]"></div>
+                <img src="./assets/img/home.png" alt="Descripción de la imagen" class="w-64 h-64 rounded-full" />
+                <div class="absolute inset-0 rounded-full"
+                    style="box-shadow: 0px 10px 51px 55px rgb(56, 189, 248, .2);"></div>
             </div>
         </div>
     </section>
 
-
-
-
-
+    <!-- Sección de Proyectos -->
     <section class="max-w-screen-xl mt-5 mx-auto p-5 sm:p-10 md:p-16" id="section-proyectos">
         <div class="border-b mb-5 flex justify-between text-sm fadeIn">
             <div class="flex items-center pb-2 pr-2 border-b-2 uppercase">
@@ -246,12 +243,10 @@
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             <!-- CARD 1 -->
-            <div class="rounded overflow-hidden shadow-lg flex flex-col fadeIn border-solid border-2 border-white">
+            <div class="rounded overflow-hidden shadow-2xl flex flex-col fadeIn border-solid border-2 border-white">
                 <div class="relative">
                     <a href="#">
-                        <img class="w-full"
-                            src="https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
-                            alt="Proyecto 1">
+                        <img class="w-full" src="./assets/img/tesis.jpg" alt="Proyecto 2">
                         <div
                             class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
                         </div>
@@ -261,9 +256,44 @@
                         class="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 bg-gray-900 bg-opacity-75 hover:opacity-100">
                         <span class="text-white text-lg mb-2">Tecnologías:</span>
                         <div class="flex space-x-4">
-                            <i class="devicon-html5-plain colored text-4xl"></i>
-                            <i class="devicon-css3-plain colored text-4xl"></i>
                             <i class="devicon-javascript-plain colored text-4xl"></i>
+                            <i class="devicon-nodejs-plain-wordmark  colored text-4xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 py-4 mb-auto">
+                    <h3 class="font-semibold text-lg mb-2">Gestor de Tesis (BackEnd)</h3>
+                    <p class="text-gray-300 text-sm">
+                        Proyecto de backend que facilita la gestión de tesis académicas, permitiendo manejar usuarios,
+                        roles, y asignaciones con Node.js y una API bien estructurada.
+                    </p>
+                </div>
+
+                <div class="px-6 py-3 flex flex-row items-center justify-between">
+                    <div></div> <!-- Placeholder para mantener el enlace a la derecha -->
+                    <a href="https://github.com/axelherreram/apiTesis"
+                        class="flex items-center space-x-2 border border-gray-300 text-white  hover:text-gray-700 hover:bg-white transition duration-300 px-2 py-1 rounded">
+                        <i class="bi bi-github text-xl"></i>
+                        <span class="text-sm font-semibold">Link GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <!-- CARD 2 -->
+            <div class="rounded overflow-hidden shadow-lg flex flex-col fadeIn border-solid border-2 border-white">
+                <div class="relative">
+                    <a href="#">
+                        <img class="w-full" src="./assets/img/iglesia.png" alt="Proyecto 1">
+                        <div
+                            class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
+                        </div>
+                    </a>
+                    <!-- Technologies Overlay -->
+                    <div
+                        class="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 bg-gray-900 bg-opacity-75 hover:opacity-100">
+                        <span class="text-white text-lg mb-2">Tecnologías:</span>
+                        <div class="flex space-x-4">
+                            <i class="devicon-php-plain colored text-4xl"></i>
+                            <i class="devicon-laravel-original colored text-4xl"></i>
                             <a href="#!" class="bg-[#]">
                                 <div
                                     class="text-xs absolute top-0 right-0 bg-[#38bdf8] rounded px-4 py-2 text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
@@ -274,72 +304,23 @@
                     </div>
                 </div>
                 <div class="px-6 py-4 mb-auto">
-                    <a href="#"
-                        class="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">Simplest
-                        Salad Recipe ever</a>
-                    <p class="text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.</p>
+                    <h3 href="#"
+                    class="font-semibold text-lg mb-2">Gestor de sacramentos</h3>
+                        <p class="text-gray-300 text-sm">Aplicación web desarrollada en PHP con Laravel para gestionar los sacramentos y eventos de una iglesia. Permite registrar y visualizar ceremonias.</p>
                 </div>
                 <div class="px-6 py-3 flex flex-row items-center justify-between">
                     <div></div> <!-- Placeholder para mantener el enlace a la derecha -->
-                    <a href="#"
+                    <a href="https://github.com/axelherreram/iglesia-sansare-wep"
                         class="flex items-center space-x-2 border border-gray-300 text-white  hover:text-gray-700 hover:bg-white transition duration-300 px-2 py-1 rounded">
                         <i class="bi bi-github text-xl"></i>
                         <span class="text-sm font-semibold">Link GitHub</span>
                     </a>
                 </div>
             </div>
-            <!-- CARD 2 -->
-            <div class="rounded overflow-hidden shadow-2xl flex flex-col fadeIn border-solid border-2 border-white">
-                <div class="relative">
-                    <a href="#">
-                        <img class="w-full"
-                            src="https://images.pexels.com/photos/1600727/pexels-photo-1600727.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                            alt="Proyecto 2">
-                        <div
-                            class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
-                        </div>
-                    </a>
-                    <!-- Technologies Overlay -->
-                    <div
-                        class="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 bg-gray-900 bg-opacity-75 hover:opacity-100">
-                        <span class="text-white text-lg mb-2">Tecnologías:</span>
-                        <div class="flex space-x-4">
-                            <i class="devicon-html5-plain colored text-4xl"></i>
-                            <i class="devicon-css3-plain colored text-4xl"></i>
-                            <i class="devicon-javascript-plain colored text-4xl"></i>
-                            <a href="#!" class="bg-[#]">
-                                <div
-                                    class="text-xs absolute top-0 right-0 bg-[#38bdf8] px-4 py-2 rounded text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                                    Ver Sitio
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="px-6 py-4 mb-auto">
-                    <a href="#"
-                        class="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out mb-2">Best
-                        FastFood Ideas (Yummy)</a>
-                    <p class="text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.</p>
-                </div>
-                <div class="px-6 py-3 flex flex-row items-center justify-between">
-                    <div></div> <!-- Placeholder para mantener el enlace a la derecha -->
-                    <a href="#"
-                        class="flex items-center space-x-2 border border-gray-300 text-white  hover:text-gray-700 hover:bg-white transition duration-300 px-2 py-1 rounded">
-                        <i class="bi bi-github text-xl"></i>
-                        <span class="text-sm font-semibold">Link GitHub</span>
-                    </a>
-                </div>
-            </div>
-
             <!-- CARD 3 -->
             <div class="rounded overflow-hidden shadow-lg flex flex-col fadeIn border-solid border-2 border-white">
                 <div class="relative">
-                    <img class="w-full"
-                        src="https://images.pexels.com/photos/6086/food-salad-healthy-vegetables.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
-                        alt="Proyecto 3">
+                    <img class="w-full" src="./assets/img/what-is.png" alt="Proyecto 3">
                     <!-- Technologies Overlay -->
                     <div
                         class="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 bg-gray-900 bg-opacity-75 hover:opacity-100">
@@ -348,25 +329,25 @@
                             <i class="devicon-html5-plain colored text-4xl"></i>
                             <i class="devicon-css3-plain colored text-4xl"></i>
                             <i class="devicon-javascript-plain colored text-4xl"></i>
-                            <a href="#!" class="bg-[#]">
-                                <div
-                                    class="text-xs absolute top-0 right-0 bg-[#38bdf8] px-4 py-2 rounded text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                                    Ver Sitio
-                                </div>
-                            </a>
+                            <img class="icon-size self-center" src="./assets/icons/what-is.png" alt="Python" />
+                            <i class="devicon-django-plain colored text-4xl"></i>
                         </div>
                     </div>
+
                 </div>
                 <div class="px-6 py-4 mb-auto">
-                    <a href="#"
-                        class="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">Why
-                        to eat salad?</a>
-                    <p class="text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.</p>
+                    <!-- Título del contenido con un estilo más definido y accesible -->
+                    <h3 class="font-semibold text-md mb-2">Consumir Procedimiento Almacenado (Stored Procedures)</h3>
+                    <!-- Descripción detallada del contenido -->
+                    <p class="text-gray-300 text-sm">
+                        Implementación en Python y Django para consumir un procedimiento almacenado configurado en SQL
+                        Server, facilitando la integración de bases de datos avanzadas.
+                    </p>
                 </div>
+
                 <div class="px-6 py-3 flex flex-row items-center justify-between">
                     <div></div> <!-- Placeholder para mantener el enlace a la derecha -->
-                    <a href="#"
+                    <a href="https://github.com/axelherreram/consumir-sp-python"
                         class="flex items-center space-x-2 border border-gray-300 text-white  hover:text-gray-700 hover:bg-white transition duration-300 px-2 py-1 rounded">
                         <i class="bi bi-github text-xl"></i>
                         <span class="text-sm font-semibold">Link GitHub</span>
@@ -376,13 +357,14 @@
         </div>
     </section>
 
+    <!-- Sección de imagen -->
     <section class=" min-h-64 relative overflow-hidden bg-custom flex items-center justify-center">
         <h4 class="text-center font-bold text-white fw text-lg md:text-2xl lg:text-3xl p-5  fadeIn">
             Programar es crear el futuro
         </h4>
     </section>
 
-
+    <!-- Sección de Sobre mí -->
     <section
         class="max-w-screen-xl h-screen mt-5 mx-auto p-5 sm:p-10 md:p-16 flex flex-col items-center justify-center relative overflow-hidden"
         id="section-sobre-mi">
@@ -392,9 +374,9 @@
                 <div class="flex justify-center mb-5">
                     <div class="relative">
                         <img src="./assets/gif/software-software-development.gif" alt="Tu foto"
-                            class="w-60 h-60 rounded-full object-cover shadow-inner shadow-[#38bdf8]" />
-                        <div
-                            class="absolute inset-0 rounded-full border-4 border-transparent shadow-lg shadow-[#38bdf8]">
+                            class="w-60 h-60 rounded-full object-cover" />
+                        <div class="absolute inset-0 rounded-full "
+                            style="box-shadow: 0px 10px 51px 55px rgb(56, 189, 248, .2);">
                         </div>
                     </div>
                 </div>
@@ -441,7 +423,7 @@
             </div>
         </div>
     </section>
-
+    <!-- Sección de contacto -->
     <section class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16" id="section-contacto">
         <h2 class="text-3xl font-bold text-white mb-4 text-center fadeIn">Contacto</h2>
         <p class="text-white text-center mb-6 fadeIn">
@@ -469,10 +451,10 @@
             </button>
         </form>
     </section>
-
+    <!-- Footer -->
     <footer class="w-full bg-gray-800 text-white">
         <div class="flex justify-center space-x-4 p-5">
-            <a href="https://www.linkedin.com/in/axel-herrera" target="_blank" aria-label="LinkedIn"
+            <a href="https://www.linkedin.com/in/axel-herrera-34a127247/" target="_blank" aria-label="LinkedIn"
                 class="hover:text-blue-500">
                 <i class="bi bi-linkedin text-2xl"></i>
             </a>
