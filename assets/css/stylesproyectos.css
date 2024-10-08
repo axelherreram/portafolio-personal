@@ -1,0 +1,18 @@
+
+body {
+    font-family: "Baloo Paaji 2", sans-serif !important;
+    background-color: #020024;
+}
+.svg-proyecto:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.svg-proyecto:hover path {
+    fill: #38bdf8; /
+}
+@media (max-width: 768px) {
+    .svg-proyecto {
+        width: 200px !important;
+    }
+}
