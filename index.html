@@ -235,12 +235,12 @@
         <div class="border-b mb-5 flex justify-between text-sm fadeIn">
             <div class="flex items-center pb-2 pr-2 border-b-2 uppercase">
                 <i class="bi bi-code text-2xl mr-1"></i>
-                <a href="#" class="font-semibold inline-block">Proyectos</a>
+                <p href="#" class="font-semibold inline-block">Proyectos destacados</p>
             </div>
- <!--            <a href="./html/more-proyectos.html"
+            <a href="./html/more-proyectos.html"
                 class="flex items-center pb-2 pr-2 border-b-2 hover:bg-gray-700 p-2 rounded">
                 <i class="bi bi-folder-plus text-1xl mr-1"></i>
-                Ver todos</a> -->
+                Ver todos</a>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             <!-- CARD 1 -->
@@ -358,34 +358,27 @@
         </div>
     </section>
 
-    <!-- Sección de imagen -->
-    <section class=" min-h-64 relative overflow-hidden bg-custom flex items-center justify-center">
-        <h4 class="text-center font-bold text-white fw text-lg md:text-2xl lg:text-3xl p-5  fadeIn">
-            Programar es crear el futuro
-        </h4>
-    </section>
 
-    <!-- Sección de Sobre mí -->
+
+    <!-- Sección de Sobre mí --> 
     <section
-        class="max-w-screen-xl h-screen mt-5 mx-auto p-5 sm:p-10 md:p-16 flex flex-col items-center justify-center relative overflow-hidden"
-        id="section-sobre-mi">
-        <div class="flex flex-col md:flex-row items-center justify-center w-full z-10">
+        class="w-full h-screen mx-auto p-5 sm:p-10 md:p-16 flex flex-col items-center justify-center relative overflow-hidden profile-bg"
+        id="section-sobre_mi" style="margin: 40px 0 100px !important; width: 100% !important;">
+
+        <div
+            class="flex flex-col md:flex-row items-center justify-center w-full z-10 profile p-10 space-y-12 md:space-y-0">
             <!-- Apartado de la foto y descripción -->
             <div class="w-full md:w-1/2 flex flex-col items-center md:items-start fadeIn">
                 <div class="flex justify-center mb-5">
                     <div class="relative">
                         <img src="./assets/gif/software-software-development.gif" alt="Tu foto"
-                            class="w-60 h-60 object-cover rounded-full"
-                            style="width: 240px; height: 240px; border-radius: 50%; object-fit: cover;">
-                        <div class="absolute inset-0 rounded-full"
-                            style="box-shadow: 0 10px 51px 55px rgba(56, 189, 248, 0.2); border-radius: 50%;">
-                        </div>
+                            class="w-60 h-60 object-cover rounded-full transition-transform duration-500 transform hover:scale-105">
                     </div>
                 </div>
 
                 <div class="text-center md:text-left">
-                    <h2 class="text-3xl font-bold text-white mb-4">Sobre mí</h2>
-                    <p class="text-white">
+                    <h2 class="text-3xl font-bold text-white mb-4">Sobre mí</h2> <!-- Ajuste aquí -->
+                    <p class="text-base text-white"> <!-- Ajuste aquí -->
                         Soy un desarrollador web apasionado, con experiencia en tecnologías como HTML, CSS, JavaScript y
                         React. Me gusta crear soluciones funcionales y mantenerme en constante aprendizaje para mejorar
                         mis habilidades.
@@ -395,36 +388,42 @@
 
             <!-- Apartado de las tecnologías -->
             <div class="w-full md:w-1/2 text-center md:text-left mt-10 md:mt-0 fadeIn">
-                <h2 class="text-3xl font-bold text-white mb-4">Tecnologías que utilizo</h2>
+                <h2 class="text-3xl font-bold text-white mb-4">Tecnologías que utilizo</h2> <!-- Ajuste aquí -->
                 <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                    <div class="flex items-center">
-                        <i class="devicon-html5-plain colored text-2xl"></i>
-                        <span class="ml-2 text-white">HTML</span>
+                    <div class="flex items-center space-x-2 transition-transform transform hover:scale-110">
+                        <i class="devicon-html5-plain colored text-3xl"></i>
+                        <span class="text-white text-lg">HTML</span>
                     </div>
-                    <div class="flex items-center">
-                        <i class="devicon-css3-plain colored text-2xl"></i>
-                        <span class="ml-2 text-white">CSS</span>
+                    <div class="flex items-center space-x-2 transition-transform transform hover:scale-110">
+                        <i class="devicon-css3-plain colored text-3xl"></i>
+                        <span class="text-white text-lg">CSS</span>
                     </div>
-                    <div class="flex items-center">
-                        <i class="devicon-javascript-plain colored text-2xl"></i>
-                        <span class="ml-2 text-white">JavaScript</span>
+                    <div class="flex items-center space-x-2 transition-transform transform hover:scale-110">
+                        <i class="devicon-javascript-plain colored text-3xl"></i>
+                        <span class="text-white text-lg">JavaScript</span>
                     </div>
-                    <div class="flex items-center">
-                        <i class="devicon-react-original colored text-2xl"></i>
-                        <span class="ml-2 text-white">React</span>
+                    <div class="flex items-center space-x-2 transition-transform transform hover:scale-110">
+                        <i class="devicon-react-original colored text-3xl"></i>
+                        <span class="text-white text-lg">React</span>
                     </div>
-                    <div class="flex items-center">
-                        <i class="devicon-nodejs-plain colored text-2xl"></i>
-                        <span class="ml-2 text-white">Node.js</span>
+                    <div class="flex items-center space-x-2 transition-transform transform hover:scale-110">
+                        <i class="devicon-nodejs-plain colored text-3xl"></i>
+                        <span class="text-white text-lg">Node.js</span>
                     </div>
-                    <div class="flex items-center">
-                        <i class="devicon-tailwindcss-plain colored text-2xl"></i>
-                        <span class="ml-2 text-white">Tailwind CSS</span>
+                    <div class="flex items-center space-x-2 transition-transform transform hover:scale-110">
+                        <i class="devicon-tailwindcss-plain colored text-3xl"></i>
+                        <span class="text-white text-lg">Tailwind CSS</span>
                     </div>
-                    <!-- Agrega más tecnologías según sea necesario -->
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Sección de imagen -->
+    <section class=" min-h-64 relative overflow-hidden bg-custom flex items-center justify-center">
+        <h4 class="text-center font-bold text-white fw text-lg md:text-2xl lg:text-3xl p-5  fadeIn">
+            Programar es crear el futuro
+        </h4>
     </section>
 
     <!-- Sección de contacto -->

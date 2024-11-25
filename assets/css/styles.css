@@ -92,17 +92,17 @@ a {
     border-radius: 8px;
 }
 
-/* Animations */
 .fadeIn {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fadeIn.active {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .fadeIn.active {
     opacity: 1;
     transform: translateY(0);
-}
+  }
+  
 
 /* Image Scale Effect */
 .scaleUp {
@@ -131,4 +131,22 @@ a {
     .inicio-sec {
         margin-top: 100px;
     }
+}
+
+.profile-bg {
+    background-image: url('../img/perfil-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6) contrast(1.2);
+}
+
+.profile {
+    backdrop-filter: blur(0px) saturate(53%);
+    -webkit-backdrop-filter: blur(0px) saturate(53%);
+    background-color: rgba(17, 25, 40, 0.56);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    
+    /* Sombra añadida */
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3); /* sombra suave */
 }

@@ -46,19 +46,16 @@ window.addEventListener("scroll", () => {
 // Funcionalidad para las animaciones de fadeIn
 const fadeElements = document.querySelectorAll(".fadeIn");
 
-// Función para verificar si el elemento está en la vista
-function isElementInViewport(el) {
+// Función para verificar si el elemento está cerca de la vista (activación anticipada)
+function isElementInViewport(el, offset = 150) {
   const rect = el.getBoundingClientRect();
   return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    rect.top <= (window.innerHeight || document.documentElement.clientHeight) - offset &&
+    rect.bottom >= 0
   );
 }
 
-// Función para añadir la clase active cuando el elemento está en la vista
+// Función para añadir la clase active cuando el elemento está cerca de la vista
 function checkFadeIn() {
   fadeElements.forEach((el) => {
     if (isElementInViewport(el)) {
@@ -106,4 +103,3 @@ navLinksa.forEach((link) => {
     });
   });
 });
-
